@@ -43,7 +43,7 @@
         margin-right: auto;
         width: 70px;
         height: 20px;
-        
+        object-fit: contain;
     }
     @-webkit-keyframes zoom {
         0% {
@@ -69,7 +69,7 @@
         position: absolute;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
-        bottom: 24px;
+        bottom: 40px;
         width: 100%;
         padding: 0 12px;
         text-align: center;
@@ -155,9 +155,9 @@
                     currentIndex = (currentIndex + 1) % images.length;
                     
                     if (currentIndex === 0) {
-                        setTimeout(function() {
+                        // setTimeout(function() {
                             resetTextAnimation();
-                        }, 2000);
+                        // }, 2000);
                     }
                 };
             }
@@ -176,7 +176,7 @@
                 textBlocks.forEach((block, index) => {
                     block.style.opacity = 0;
                     block.style.transform = 'translateY(20px)';
-                    block.style.animation = `fadeInUp 0.5s ${(2 + index)}s forwards`;
+                    block.style.animation = `fadeInUp 0.5s ${(index)}s forwards`;
                 });
             }
 
